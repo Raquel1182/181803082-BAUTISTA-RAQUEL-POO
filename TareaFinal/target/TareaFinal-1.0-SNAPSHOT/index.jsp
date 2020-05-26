@@ -21,7 +21,7 @@
             int numero = Integer.parseInt(request.getParameter("numero"));
 
             for (int i = 0; i <= numero; i++) {
-                out.println(i);
+                out.println(i + " ");
             }%>
         <form>
             <input type="hidden" name="Numero"/>
