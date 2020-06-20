@@ -12,7 +12,7 @@
         stmt = conexion.prepareStatement("INSERT INTO usuario SET usuario=?, password=MD5(?)");
         stmt.setString(1, request.getParameter("usuario"));
         stmt.setString(2, request.getParameter("password"));
-        if (stmt.executeUpdate() == 1) { 
+        if (stmt.executeUpdate() == 1) {
 %>
 <div class="alert alert-success" role="alert">
     <h2>Se agregó exitosamente el registro en la base de datos</h2>
@@ -38,7 +38,12 @@
     </body>
 </html>
 <%
-    } catch (Exception e) {
-        out.println(e.getMessage());
-    }
+    } catch (Exception e) {%>
+    <form action="index.jsp" methode="POST" class="form" >
+        <div class="alert alert-success" role="alert">
+                    <h2 align="center">No se pudo agregar el registro a la base de datos, consulte con los administradores</h2>
+                    <input type="submit" class="btn btn-success btn-block" value="Regresar" />
+        </div>
+    </form>
+    <%}
 %>

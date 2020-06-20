@@ -11,7 +11,7 @@
     <body>
         <div class="container">
              <h1>Agregar un nuevo usuario</h1>
-            <form action="AgregarUsuario.jsp" method="GET" >
+            <form action="AgregarUsuario.jsp" method="POST" >
                 <div class="form-row">   
                     <div class="col">
                          <input type="text" class="form-control" placeholder="Nombre" name="usuario" required>
